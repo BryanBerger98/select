@@ -1,3 +1,4 @@
+import SearchMultiSelectCities from './components/features/SearchMultiSelectCities';
 import SearchSelectCities from './components/features/SearchSelectCities';
 import SearchSelectCitiesWithSelection from './components/features/SearchSelectCitiesWithSelection';
 import SearchSelectCity from './components/features/SearchSelectCity';
@@ -17,6 +18,9 @@ const App = () => {
 				</div>
 				<div className="col-span-1">
 					<SearchSelectCitiesWithSelection />
+				</div>
+				<div className="col-span-1">
+					<SearchMultiSelectCities />
 				</div>
 			</div>
 		</main>

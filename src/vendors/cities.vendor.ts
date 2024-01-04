@@ -25,7 +25,6 @@ export const fetchFrenchCitiesByName = async ({ name, limit = 10 }: { name: stri
 				'Access-Control-Allow-Origin': '*',
 			},
 		});
-		console.log(data);
 		return CitySchema.array().parse(data);
 	} catch (error) {
 		throw error;
