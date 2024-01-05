@@ -1,6 +1,6 @@
 import { Search } from 'lucide-react';
 import { Input } from '../ui/input';
-import { ChangeEventHandler } from 'react';
+import { ChangeEventHandler, useEffect } from 'react';
 
 type ComboboxSearchProps = {
 	placeholder?: string;
@@ -8,9 +8,15 @@ type ComboboxSearchProps = {
 	onSearch?: (value: string) => void;
 }
 
+let delay: NodeJS.Timeout;
+
 const ComboboxSearch = ({ placeholder = '', debounceDelay = 400, onSearch }: ComboboxSearchProps) => {
 
-	let delay: NodeJS.Timeout;
+	useEffect(() => {
+		() => {
+			clearTimeout(delay);
+		}
+	}, []);
 
 	const handleClearDelay = () => {
 		if (onSearch) {

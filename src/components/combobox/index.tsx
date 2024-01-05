@@ -46,21 +46,6 @@ type UncontrolledComboboxProps <TMode extends ComboboxMode = 'single', TData = u
 	onSelect?: UncontrolledSelectHandler<TMode, TData>;
 };
 
-// type ComboboxProps<TMode extends ComboboxMode = 'single', TData = unknown, TSelected extends ComboboxSelection<TMode, TData> | undefined = undefined> = {
-// 	children: ReactNode;
-// 	options: ComboboxOption<TData>[];
-// 	debounceDelay?: number;
-// 	onSearch?: (value: string) => void;
-// 	isOpen?: boolean;
-// 	onOpenChange?: (open: boolean) => void;
-// 	onSelect?: TSelected extends undefined ? ((value: ComboboxSelection<TMode, TData>) => void) : ((value: ComboboxOption<TData>) => void);
-// 	isLoading?: boolean;
-// 	defaultSelected?: ComboboxSelection<TMode, TData>;
-// 	selected?: TSelected;
-// 	mode?: TMode;
-// 	onBlur?: (event: PointerDownOutsideEvent | FocusOutsideEvent) => void;
-// };
-
 type ComboboxProps<TMode extends ComboboxMode = 'single', TData = unknown> = ControlledComboboxProps<TMode, TData> | UncontrolledComboboxProps<TMode, TData>;
 
 type ComboboxValue<TMode extends ComboboxMode = ComboboxMode, TData = unknown> = {
